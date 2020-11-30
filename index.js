@@ -41,17 +41,37 @@ inquirer
     }
 
 ]).then((answers)=>{
+let markdown = `# ${answers.title}
 
+## Discription
+${answers.purpose}
+
+## Installation
+${answers.achieve}
+
+## License
+${answers.license}
+
+## UserName
+${answers.username}
+
+`;
+fs.writeFile('README.md', markdown, (err) => {
+    if (err) {
+        throw err;
+    }
+    console.log("Successfully created ReadMe!")
+});
 })
 
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => {
-        if (err) {
-            throw err;
-        }
-        console.log("Successfully created ReadMe!")
-    });
-}
+// function writeToFile(fileName, data) {
+//     fs.writeFile(fileName, data, (err) => {
+//         if (err) {
+//             throw err;
+//         }
+//         console.log("Successfully created ReadMe!")
+//     });
+// }
 
 // function init() {
 //     inquirer.prompt(questions).then((answers) => {
