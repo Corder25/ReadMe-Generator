@@ -1,6 +1,6 @@
 # jfdklsaj
 
-## Discription
+## Description
 fjdsha
 
 ## Installation
