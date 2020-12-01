@@ -43,7 +43,7 @@ inquirer
 ]).then((answers)=>{
 let markdown = `# ${answers.title}
 
-## Discription
+## Description
 ${answers.purpose}
 
 ## Installation
